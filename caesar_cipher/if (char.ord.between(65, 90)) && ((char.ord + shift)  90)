@@ -1,0 +1,21 @@
+
+[1mFrom:[0m /mnt/c/Users/Franz Decinal/Ruby/ruby_exercises/caesar_cipher/lib/caesar_cipher.rb:21 CaesarCipher#encrypt:
+
+     [1;34m5[0m: [32mdef[0m [1;34mencrypt[0m (message, shift) 
+     [1;34m6[0m:   shifted_chars = []
+     [1;34m7[0m:   shift = shift % [1;34m26[0m [1;34m# reduces large shift input[0m
+     [1;34m8[0m: 
+     [1;34m9[0m:   message.each_char { | char | 
+    [1;34m10[0m:     [32mif[0m (char.ord.between?([1;34m97[0m, [1;34m122[0m)) && ((char.ord + shift) > [1;34m122[0m)
+    [1;34m11[0m:       shifted_chars.push((char.ord + shift [1;34m-26[0m).chr)
+    [1;34m12[0m:     [32melsif[0m (char.ord.between?([1;34m65[0m, [1;34m90[0m)) && ((char.ord + shift) > [1;34m90[0m)
+    [1;34m13[0m:       shifted_chars.push((char.ord + shift [1;34m-26[0m).chr)
+    [1;34m14[0m:     [1;34m# else [0m
+    [1;34m15[0m:     [1;34m#   shifted_chars.push((char.ord + shift).chr)[0m
+    [1;34m16[0m:     [32mend[0m
+    [1;34m17[0m:   }
+    [1;34m18[0m: 
+    [1;34m19[0m:   encrypted_message = shifted_chars.join([31m[1;31m'[0m[31m[1;31m'[0m[31m[0m)
+    [1;34m20[0m:   binding.pry
+ => [1;34m21[0m: [32mend[0m
+
